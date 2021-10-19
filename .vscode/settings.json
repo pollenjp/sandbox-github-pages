@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        // html
+        "**/*.html": "html",
+        "**/_includes/**/*.html": "liquid",
+        "**/_layouts/**/*.html": "liquid",
+    },
+    "[liquid]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+    },
+}
