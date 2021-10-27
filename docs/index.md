@@ -5,7 +5,7 @@ Hoge Hoge
 ## Pages
 
 <ul>
-  {% for a_page in site.pages %}
+  {% for a_page in site.pages | where_exp:"item","item.title != nil" %}
     <li>
       <a href="{{ site.github.url }}/{{ a_page.url }}">{{ a_page.title }}</a>
     </li>
