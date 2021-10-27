@@ -72,6 +72,11 @@ logo: https://i.gyazo.com/d09bde2579528b21f63ad08e7b10b879.png
                         <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
                     </p>
                 {% endif %}
+                {% if site.github.build_revision != nil %}
+                    <p>
+                        commit hash {{ site.github.build_revision }}
+                    </p>
+                {% endif %}
                 <p>
                     <small>Hosted on GitHub Pages &mdash; Theme by
                         <a href="https://github.com/orderedlist">orderedlist</a>
