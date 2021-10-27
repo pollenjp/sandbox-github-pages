@@ -1,5 +1,4 @@
 ---
-logo: https://i.gyazo.com/d09bde2579528b21f63ad08e7b10b879.png
 ---
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
@@ -23,6 +22,8 @@ logo: https://i.gyazo.com/d09bde2579528b21f63ad08e7b10b879.png
 
                 {% if site.logo %}
                     <img src="{{ site.logo | relative_url }}" alt="Logo"/>
+                {% else %}
+                    <img alt="Logo" src="https://i.gyazo.com/d09bde2579528b21f63ad08e7b10b879.png"/>
                 {% endif %}
 
                 <p>{{ site.description | default: site.github.project_tagline }}</p>
@@ -72,9 +73,11 @@ logo: https://i.gyazo.com/d09bde2579528b21f63ad08e7b10b879.png
                         <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
                     </p>
                 {% endif %}
-                {% if site.github.build_revision != nil %}
+                {% if site.github %}
                     <p>
-                        commit hash {{ site.github.build_revision }}
+                        <a href="{{ site.github.repository_url }}/tree/{{ site.github.build_revision }}">
+                            See {{ site.github.source.branch }}'s {{ site.github.build_revision }}
+                        </a>
                     </p>
                 {% endif %}
                 <p>
