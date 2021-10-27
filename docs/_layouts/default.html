@@ -1,3 +1,6 @@
+---
+logo: https://i.gyazo.com/d09bde2579528b21f63ad08e7b10b879.png
+---
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
     <head>
@@ -19,7 +22,7 @@
                 </h1>
 
                 {% if site.logo %}
-                    <img src="{{site.logo | relative_url}}" alt="Logo"/>
+                    <img src="{{ site.logo | relative_url }}" alt="Logo"/>
                 {% endif %}
 
                 <p>{{ site.description | default: site.github.project_tagline }}</p>
