@@ -6,11 +6,15 @@ Hoge Hoge
 
 <ul>
   {% for a_page in site.html_pages %}
-    <li>
-      <a href="{{ site.github.url }}{{ a_page.url }}">{{ a_page.title }}</a>
-    </li>
+    {% if a_page.title != site.title %}
+      <li>
+        <a href="{{ site.github.url }}{{ a_page.url }}">{{ a_page.title }}</a>
+        ({{ a_page.title }}, {{ site.title }})
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
+
 
 ## Posts
 
