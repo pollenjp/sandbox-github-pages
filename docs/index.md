@@ -9,7 +9,6 @@ Hoge Hoge
     {% if a_page.title != page.title %}
       <li>
         <a href="{{ site.github.url }}{{ a_page.url }}">{{ a_page.title }}</a>
-        ({{ a_page.title }}, {{ page.title }})
       </li>
     {% endif %}
   {% endfor %}
