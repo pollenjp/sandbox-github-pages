@@ -20,7 +20,7 @@ Hoge Hoge
   {% for post in site.posts %}
     <li>
       <a href="{{ site.github.url }}{{ post.url }}">
-        {{ post.date }} {{ post.title }}
+        {{ post.date | date: "%Y-%m-%d" }} {{ post.title }}
       </a>
     </li>
   {% endfor %}
