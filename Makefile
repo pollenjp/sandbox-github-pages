@@ -3,13 +3,6 @@ PAGES_PATH := docs
 REPO_DIRPATH_CONTAINER := /srv/jekyll/repo
 JEKYLL_DOCKER_IMAGE := "jekyll/jekyll"
 
-.PHONY: build
-build:
-	docker build \
-		--tag ${JEKYLL_DOCKER_IMAGE} \
-		--file docker/jekyll/Dockerfile \
-		.
-
 
 .PHONY: run
 run:
