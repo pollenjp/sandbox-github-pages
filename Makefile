@@ -20,7 +20,8 @@ run:
 		bash -euxc '\
 			echo "Generating config for local run" && \
 			local_config_path=/local_run_config.yml && \
-			echo "github:"                                             > $${local_config_path} && \
+			touch $${local_config_path} && \
+			echo "github:"                                             >> $${local_config_path} && \
 			echo "  url: \"http://$$(hostname -i):${CONTAINER_PORT}\"" >> $${local_config_path} && \
 			echo "bundle install and exec" && \
 			cd ${CONTAINER_REPO_DIRPATH} && \
